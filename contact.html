@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Me | Digital Lab</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #121212;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #6e3aff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        .contact {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .contact-icon {
+            margin-right: 15px;
+            color: #6e3aff;
+            transition: transform 0.3s ease;
+        }
+
+        .large-icon {
+            font-size: 32px;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.2);
+        }
+
+        .contact-social {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            transition: transform 0.3s ease;
+            color: #e0e0e0;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #6e3aff;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #121212;
+            border-radius: 6px;
+        }
+
+        .submit-btn {
+            padding: 0.75rem 1.5rem;
+            background: #6e3aff;
+            color: #121212;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #6e3aff;
+        }
+
+        .footer {
+            background: #121212;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #6e3aff;
+        }
+
+        .footer-links a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+
+        .footer-social a {
+            margin-right: 1rem;
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.2);
+            color: #6e3aff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-logo">IT LAB</div>
+    <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="myprojects.html" class="nav-link">Projects</a>
+        <a href="aboutme.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+</nav>
+
+<section class="contact">
+    <div class="contact-info">
+        <h2 class="fade-in">Let's Connect</h2>
+        <p class="fade-in">Have a project in mind or just want to say hello? Feel free to reach out. I'm always open to discussing new ideas or collaborations.</p>
+
+        <div class="contact-details fade-in">
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon large-icon"></i>
+                <span>bedrettinsahin2002@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone contact-icon large-icon"></i>
+                <span>+66 979 801 807</span>
+            </div>
+        </div>
+
+        <div class="contact-social fade-in">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github social-icon large-icon"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin social-icon large-icon"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter social-icon large-icon"></i></a>
+        </div>
+    </div>
+
+    <div class="contact-form fade-in">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject (Optional)</label>
+                <input type="text" id="subject" class="form-input" />
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-input" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">IT LAB</div>
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="myprojects.html">Projects</a>
+            <a href="aboutme.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- GSAP Animations -->
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.fade-in').forEach((el, i) => {
+        gsap.from(el, {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: i * 0.2,
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    gsap.utils.toArray('.large-icon').forEach((icon, i) => {
+        gsap.from(icon, {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+            delay: 0.3 + i * 0.2,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+                trigger: icon,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

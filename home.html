@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Lab | Creative Development Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-logo">IT LAB</div>
+    <button class="hamburger">☰</button> <!-- Hamburger butonu eklendi -->
+    <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="myprojects.html" class="nav-link">Projects</a>
+        <a href="aboutme.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+</nav>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <span class="hero-subtitle">Welcome to</span>
+        <h1>Digital Laboratory</h1>
+        <p>Exploring the boundaries of digital creation through innovative development and design</p>
+        <div class="hero-buttons">
+            <a href="myprojects.html" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-graphics">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="section-header">
+        <span class="section-subtitle">What We Do</span>
+        <h2>Our Expertise</h2>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Creating responsive and dynamic web applications using modern technologies</p>
+            <a href="#" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Crafting beautiful and intuitive user interfaces with attention to detail</p>
+            <a href="#" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Apps</h3>
+            <p>Developing cross-platform mobile applications for iOS and Android</p>
+            <a href="#" class="feature-link">Learn More →</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <span class="section-subtitle">Get in Touch</span>
+            <h2>Let's Work Together</h2>
+            <p>Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you as soon as possible.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>bedrettinsahin2002@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+66 979 801 807</span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-input" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">IT LAB</div>
+        <div class="footer-links">
+            <a href="#home.html">Home</a>
+            <a href="#myprojects.html">Projects</a>
+            <a href="#aboutme.html">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

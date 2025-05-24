@@ -1,0 +1,456 @@
+:root {
+    --primary: #6e3aff;
+    --secondary: #ff3a8c;
+    --dark: #0a0a0a;
+    --light: #f5f5f5;
+    --background: #121212;
+    --surface: #1e1e1e;
+    --surface-2: #2d2d2d;
+    --text: #ffffff;
+    --text-secondary: #b3b3b3;
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --card-bg: #1e1e1e;
+    --form-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+    --input-border: #404040;
+    --success: #00cc88;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --electric-blue: #00ffff;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* 🚀 Skills Başlığı ile Kutular Arasına Boşluk Ekleme */
+.skills-content h2 {
+    margin-bottom: 2rem; /* Boşluk eklendi */
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+
+/* 🚀 Sabit Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 1rem 2rem;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav.scrolled {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem 2rem;
+    width: 85%;
+    backdrop-filter: blur(20px);
+}
+
+/* 🚀 Logo ve Linkler */
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #872d8b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+    text-shadow: 0px 0px 8px var(--primary);
+    transform: translateY(-3px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Subtle overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow:
+            0px 0px 4px #0ff,
+            0px 0px 2px #0ff,
+            0px 0px 3px #0ff,
+            0px 0px 3px #00f7ff;
+    animation: neonGlow 4s infinite alternate;
+}
+
+
+@keyframes neonGlow {
+    0% {
+        text-shadow:
+                0px 0px 5px #0ff,
+                0px 0px 10px #0ff,
+                0px 0px 15px #0ff,
+                0px 0px 20px #00f7ff;
+    }
+    50% {
+        text-shadow:
+                0px 0px 10px #ff00ff,
+                0px 0px 20px #ff00ff,
+                0px 0px 30px #ff00ff,
+                0px 0px 40px #ff00ff;
+    }
+    100% {
+        text-shadow:
+                0px 0px 5px #0ff,
+                0px 0px 10px #0ff,
+                0px 0px 15px #0ff,
+                0px 0px 20px #00f7ff;
+    }
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+/* About Me ve Skills başlıkları için temel stil */
+.about-content h2, .skills-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    /* Varsayılan renk ve gölge efekti */
+    color: var(--text) !important;
+}
+
+/* Hover efekti - daha güçlü parlama */
+.about-content h2:hover, .skills-content h2:hover {
+    color: var(--electric-blue) !important;
+    text-shadow:
+            0 0 1px var(--electric-blue),
+            0 0 1px var(--electric-blue),
+            0 0 2px var(--electric-blue),
+            0 0 5px var(--electric-blue);
+    transform: scale(1.05);
+}
+
+/* Çizgi efekti */
+.about-content h2::after, .skills-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--electric-blue);
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Çizgi hover efekti */
+.about-content h2:hover::after, .skills-content h2:hover::after {
+    width: 30%;
+    box-shadow:
+            0 0 5px var(--electric-blue),
+            0 0 10px var(--electric-blue),
+            0 0 20px var(--electric-blue);
+}
+
+
+
+/* About Section */
+.about-section {
+    padding: 5rem 2rem;
+    animation: sectionFadeIn 1.5s ease-out forwards; /* Fade-in animation for the section */
+    opacity: 1; /* Başlangıçta görünür olsun */
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* About Başlığı */
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+
+
+}
+
+/* Hover: Başlığa Neon Efekti */
+.about-content h2:hover {
+    color: var(--accent-color);
+
+}
+
+
+
+/* About Me Yazıları */
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-top: 1rem;
+    animation: fadeUp 1.8s ease-out;
+    opacity: 1 !important; /* **Yazıları Zorla Görünür Yap** */
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+
+/* Animasyonlar */
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 5rem 2rem;
+    background: var(--background-color);
+    animation: sectionFadeIn 1.5s ease-out forwards; /* Fade-in animation for the section */
+    opacity: 0; /* Başlangıçta görünmez */
+}
+
+
+
+/* Skills İçeriği */
+.skills-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.skills-content h2 {
+    font-size: 2.5rem;
+
+}
+
+/* 🚀 Hover: Renk Değiştir */
+.skills-content h2:hover {
+    color: var(--accent-color); /* Mouse ile üzerine gelince vurgu rengi */
+}
+
+
+
+
+
+
+.skills-category {
+    margin-bottom: 5rem; /* **Kategoriler arası mesafeyi arttır** */
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+}
+
+/* 🚀 Sürekli Değişen RGB Glow Efekti */
+/* 🚀 Tek Renkli Glow Efekti */
+@keyframes steadyGlow {
+    0% {
+        box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+    }
+    50% {
+        box-shadow: 0 0 15px var(--primary), 0 0 25px var(--primary), 0 0 35px var(--primary);
+    }
+    100% {
+        box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+    }
+}
+
+
+/* 🚀 Skill Kartları - Tek Renk Neon Efekti */
+.skill-card {
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    animation: steadyGlow 3s infinite alternate ease-in-out; /* **Sabit Neon Işık Efekti** */
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+/* 🚀 Hover: Glow Efektini Biraz Artır */
+.skill-card:hover {
+    transform: scale(1.1) rotateY(5deg) rotateX(3deg) translateY(-5px);
+    box-shadow: 0 0 20px var(--secondary), 0 0 40px var(--secondary), 0 0 60px var(--secondary);
+}
+
+
+/* 🚀 Skill Kartlarının Ön Yüzü (ARKA YÜZ KALDIRILDI) */
+.skill-card .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: transform 0.6s ease-in-out;
+    background: var(--card-bg-color);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
